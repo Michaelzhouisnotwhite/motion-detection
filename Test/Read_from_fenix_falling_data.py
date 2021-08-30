@@ -16,7 +16,7 @@ import numpy as np
 
 class config:
     def __init__(self, file_name):
-        self.root = r"E:\User_Michaels\My Projects\Python Project\motion-detection\Datasets/fenix falling data"
+        self.root = r"..\Datasets/fenix falling data"
         self.image_dir_path = os.path.join(self.root, file_name)
         self.rate = float(60)
         self.image_path_list = [os.path.join(self.image_dir_path, image_path)

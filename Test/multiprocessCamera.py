@@ -7,7 +7,7 @@ from __future__ import print_function
 import time
 
 from image_use_pyopenpose import *
-from Modules.common import draw_str, clock, StatValue
+from utils.common import draw_str, clock, StatValue
 import cv2
 
 '''
