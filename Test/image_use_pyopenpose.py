@@ -22,7 +22,7 @@ import concurrent.futures
 #         'Error: OpenPose library could not be found. Did you enable `BUILD_PYTHON` in CMake and have this Python '
 #         'script in the right folder?')
 #     raise e
-import Openpose.pyopenpose as op
+import openpose as op
 
 
 def to_precised_decimal(mat, num):
@@ -31,7 +31,7 @@ def to_precised_decimal(mat, num):
 
 
 class PyOpenpose(object):
-    def __init__(self, net_resolution, model_folder):
+    def __init__(self, net_resolution, model_folder = op.ModelDir):
         """
         :return:
         """
@@ -106,7 +106,7 @@ class PyOpenpose(object):
 
 
 if __name__ == "__main__":
-    model_dir = "../models"
+    # model_dir = "../models"
     json_dir = "../tmp_json"
     cap = cv.VideoCapture(0)
     # cap.set(cv.CAP_PROP_FPS, 2)

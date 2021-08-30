@@ -2,8 +2,10 @@
 @author: Michael
 @version: 2021-04-25
 """
+
+import sys
 from multiprocessing.pool import ThreadPool
-from common import draw_str, clock, StatValue
+from utils.common import draw_str, clock, StatValue
 from collections import deque
 from image_use_pyopenpose import *
 import cv2 as cv
@@ -11,15 +13,10 @@ import os
 
 import numpy as np
 
-"""
-@author: Michael
-@version: 2021-04-25
-"""
-
 
 class config:
     def __init__(self, file_name):
-        self.root = "../Datasets/fenix falling data"
+        self.root = r"E:\User_Michaels\My Projects\Python Project\motion-detection\Datasets/fenix falling data"
         self.image_dir_path = os.path.join(self.root, file_name)
         self.rate = float(60)
         self.image_path_list = [os.path.join(self.image_dir_path, image_path)
@@ -39,7 +36,7 @@ def get_acc(dis, t_2):
 
 class Process(PyOpenpose):
     def __init__(self):
-        model_dir = "../models"
+        model_dir = op.ModelDir
         json_dir = "../tmp_json"
         net_resolution = "-1x192"
         super().__init__(net_resolution, model_dir)
@@ -90,7 +87,7 @@ def main():
             dis = pose_distance(pose0, pose1)
             a = get_acc(dis, t_2)
             # else:
-            frame = d05
+            frame = d0
             # draw_str(frame, (20, 40), "a: %f" % a[0, 0])
             cv.imshow("video", frame)
             print(to_precised_decimal(a, 4))
