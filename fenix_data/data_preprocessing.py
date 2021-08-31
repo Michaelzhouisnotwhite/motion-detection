@@ -20,8 +20,8 @@ for folder in fall_dir_list:
     pic_name_list = []
     for pic in os.listdir(folder_path):
         (filepath,tempfilename) = os.path.split(pic)
-        (shotname,extension) = os.path.splitext(tempfilename)
-        pic_name_list.append([shotname, extension])
+        (shortname, extension) = os.path.splitext(tempfilename)
+        pic_name_list.append([shortname, extension])
     full_pic_name_list.append(pic_name_list)
 # %%
 df_save_list = []
@@ -33,6 +33,7 @@ for csv_name, pic_n_list in zip(csv_name_list, full_pic_name_list):
 # %%
 for csv_name, df in zip(csv_name_list, df_save_list):
     # f =pd.ExcelWriter(os.path.join(csv_dir, csv_name+".xlsx"))
-    df.to_csv(os.path.join(csv_dir, csv_name+".xlsx"),index=False)
+    path = os.path.join(csv_dir, csv_name+".csv")
+    df.to_csv(path_or_buf=path ,index=False)
         
 # %%
