@@ -115,7 +115,7 @@ if __name__ == "__main__":
         # time.sleep(0.7)
         ret, image = cap.read()
         if not ret:
-            print("no cam")
+            print("count cam")
             break
         # image = cv.resize(image.copy(), (0, 0), fx=0.5, fy=0.5, interpolation=cv.INTER_NEAREST)
         # datum = openpose_detection(image, "-1x192", model_dir, json_dir)

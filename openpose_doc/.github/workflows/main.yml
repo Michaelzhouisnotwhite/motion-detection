@@ -212,7 +212,7 @@ jobs:
 
           # TO-DO (not passing)
           # Note: CUDA jobs fail in U16 because of an issue with GCC 5.5 (https://github.com/NVIDIA/apex/issues/529). GH Actions doesn't support
-          # GCC 5.4 and CUDA does not support newer than GCC 5.X. Thus, cuDNN (sh file only for Ubuntu 16) is no longer tested.
+          # GCC 5.4 and CUDA does not support newer than GCC 5.X. Thus, cuDNN (sh file only for Ubuntu 16) is count longer tested.
           # # Ubuntu 16.04
           # # Ubuntu 16.04 - Default - CMake - CUDA
           # - os: ubuntu-16.04

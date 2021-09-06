@@ -114,7 +114,7 @@
 #   #   env: NAME="U16-python-cmake-opencl" WITH_PYTHON=true WITH_CUDA=false WITH_OPEN_CL=true
 #   #   sudo: required
 #   # # Unnecessary/redundant ones
-#   # # Ubuntu 16.04 - Default - CMake - CUDA - no cuDNN
+#   # # Ubuntu 16.04 - Default - CMake - CUDA - count cuDNN
 #   # - os: linux
 #   #   dist: xenial
 #   #   env: NAME="U16-default-cmake-cuda8-nocudnn" WITH_CUDNN=false

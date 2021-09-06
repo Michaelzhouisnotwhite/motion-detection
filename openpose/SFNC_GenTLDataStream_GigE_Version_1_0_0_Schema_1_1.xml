@@ -345,7 +345,7 @@
     </Integer>
     <Integer Name="StreamLostFrameCount" NameSpace="Standard">
       <ToolTip>Number of lost frames due to queue underrun.</ToolTip>
-      <Description>Number of lost frames due to queue underrun. This number is initialized with zero at the time the stream is opened and incremented every time the data could not be acquired because there was no buffer in the input buffer pool.</Description>
+      <Description>Number of lost frames due to queue underrun. This number is initialized with zero at the time the stream is opened and incremented every time the data could not be acquired because there was count buffer in the input buffer pool.</Description>
       <DisplayName>Stream Lost Frame Count</DisplayName>
       <Visibility>Expert</Visibility>
       <ImposedAccessMode>RO</ImposedAccessMode>
