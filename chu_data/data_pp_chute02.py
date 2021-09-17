@@ -1,21 +1,20 @@
 """
 @author: Michael
-@version: 2021-09-06
+@version: 2021-09-17
 """
+
 # %%
 import cv2 as cv
 import os
-
+# 1. workspace_root = 右键-> copy-> absolutely path
 workspace_root = r"E:\User_Michaels\My Projects\Python Project\motion-detection"
 # %%
-chute01_video_folder_path = os.path.join(workspace_root, "Datasets/chu_data/chute01")
+chute01_video_folder_path = os.path.join(workspace_root, "Datasets/chu_data/chute03")
 chute01_pic_folder_path = os.path.join(workspace_root, "chu_data/video2pic")
 # %%
 chute01_video_list = []
 for avi in os.listdir(chute01_video_folder_path):
     chute01_video_list.append(os.path.join(chute01_video_folder_path, avi))
-
-# %%
 
 # %%
 for path in chute01_video_list:
@@ -27,13 +26,21 @@ for path in chute01_video_list:
         if not ret:
             break
         (filepath, temp_filepath) = os.path.split(path)
-        (_, video_folder) = os.path.split(filepath)
+        (video_kind_folder, video_folder) = os.path.split(filepath)
         (file_name, extension) = os.path.splitext(temp_filepath)
         count += 1
+
+        _, kind_name = os.path.split(video_kind_folder)
         if count % 10 == 0:
-            save_path = os.path.join(chute01_pic_folder_path, video_folder) + "/{}/frame{}.png".format(file_name, no)
+            save_path = os.path.join(chute01_pic_folder_path, video_folder)
+            if not os.path.exists(save_path):
+                os.mkdir(save_path)
+
+            if not os.path.exists(save_path + "/{}".format(file_name)):
+                os.mkdir(save_path + "/{}".format(file_name))
+            save_pic_path = save_path + "/{}/frame{}.png".format(file_name, no)
             no += 1
-            cv.imwrite(save_path, frame)
+            cv.imwrite(save_pic_path, frame)
         continue
 
     cap.release()

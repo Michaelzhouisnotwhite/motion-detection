@@ -8,9 +8,12 @@ import numpy as np
 import os
 
 # %%
+# 1. workspace_root = 右键-> copy-> absolutely path
 workspace_root = r"E:\User_Michaels\My Projects\Python Project\motion-detection"
 # %%
-pic_dir = os.path.join(workspace_root, "chu_data/video2pic/chute01")
+
+# 2. 改数字
+pic_dir = os.path.join(workspace_root, "chu_data/video2pic/chute03")
 csv_saved_root_path = os.path.join(workspace_root, "chu_data/csv")
 
 
