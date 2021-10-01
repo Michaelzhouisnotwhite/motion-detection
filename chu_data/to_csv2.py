@@ -13,7 +13,7 @@ workspace_root = r"E:\User_Michaels\My Projects\Python Project\motion-detection"
 # %%
 
 # 2. 改数字
-pic_dir = os.path.join(workspace_root, "chu_data/video2pic/chute03")
+pic_dir = os.path.join(workspace_root, "chu_data/video2pic/chute04")
 csv_saved_root_path = os.path.join(workspace_root, "chu_data/csv")
 
 

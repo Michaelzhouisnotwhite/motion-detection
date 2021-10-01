@@ -9,7 +9,7 @@ import os
 # 1. workspace_root = 右键-> copy-> absolutely path
 workspace_root = r"E:\User_Michaels\My Projects\Python Project\motion-detection"
 # %%
-chute01_video_folder_path = os.path.join(workspace_root, "Datasets/chu_data/chute03")
+chute01_video_folder_path = os.path.join(workspace_root, "Datasets/chu_data/chute05")
 chute01_pic_folder_path = os.path.join(workspace_root, "chu_data/video2pic")
 # %%
 chute01_video_list = []
